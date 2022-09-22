@@ -73,6 +73,38 @@ Protected Module About
 		
 		When you make changes, add new notes above existing ones, and remember to increment the Version constant.
 		
+		222: 2022-08-06 by VVB
+		- Fixed clashing method name in StringExtension 'Contains' to 'ContainsString', and 'ContainsB' to match into 'ContainsStringB'.
+		- Modified existing uses in the example projects to use 'ContainsString' to remain backwards compatible.
+		- Altered the layout of the NSToolbar example window.
+		- Set CoreFoundation.CFRange to integer for 64bit compatibility.
+		
+		221: 2022-01-03 by VVB
+		- Renamed PDFDocument class in PDFKit to mlPDFDocument because the name clashed with a recently added class in Xojo 2021R3.1.
+		
+		220: 2021-02-11 by EP
+		- Complete changes required to prevent QTKit inclusion on ARM builds.
+		
+		219: 2021-01-23 by VVB
+		- Added support for NSWindowToolbarStyle, added ToolbarStyle as a WindowExtension and added a popupmenu to the NSToolbar example to showcase the different styles.
+		- Added support for NSWindowTitlebarSeparatorStyle, added TitlebarSeparatorStyle as a WindowExtension and added a popupmenu to the NSToolbar example to showcase the different styles.
+		- Reorganized the NSToolbar Example.
+		- Fixed some issues with NSWindow.Subtitle, added Subtitle as a WindowExtension and added a textfield to the NSToolbar example to showcase this function.
+		- Added TouchbarIcons to the SystemIconsExampleWindow and added them to SystemIcons.Touchbar extensions, reworked some code to make it work better in high resolution and reorganized the layout.
+		
+		218: 2021-01-20 by VVB
+		- Added support for BigSur NSWindow.Subtitle and added it to the NSWindow and NSToolbar examples.
+		- Merged swampcat's branch which prevents references to removed QTKit.framework on Apple Silicon (ARM) processors.
+		
+		217: 2021-01-20 by VVB
+		- Added OS Version check for IsBigSur.
+		
+		216: 2021-01-20 by VVB
+		- Changed a function in NSCharacterSet.AllowedCharacters from 'Realbasic.pow' to 'pow' to support building in Xojo 2020R2 and higher.
+		
+		215: 2020-02-07 by EP
+		- Handle Linux compile with Xojo 2019r2 and higher
+		
 		214: 2019-11-23 by VVB
 		- Added an alternative method for MoveToTrash to support Xojo 2019.02+
 		
@@ -696,7 +728,7 @@ Protected Module About
 	#tag EndNote
 
 
-	#tag Constant, Name = Version, Type = Double, Dynamic = False, Default = \"214", Scope = Protected
+	#tag Constant, Name = Version, Type = Double, Dynamic = False, Default = \"222", Scope = Protected
 	#tag EndConstant
 
 
@@ -707,6 +739,7 @@ Protected Module About
 			Group="ID"
 			InitialValue="-2147483648"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
@@ -714,18 +747,23 @@ Protected Module About
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Super"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
@@ -733,6 +771,7 @@ Protected Module About
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Module

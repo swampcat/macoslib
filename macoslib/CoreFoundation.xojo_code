@@ -77,7 +77,7 @@ Module CoreFoundation
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function CFRangeMake(loc as Int32, len as Int32) As CFRange
+		Function CFRangeMake(loc as Integer, len as Integer) As CFRange
 		  dim r as CFRange
 		  r.location = loc
 		  r.length = len
@@ -631,8 +631,8 @@ Module CoreFoundation
 
 
 	#tag Structure, Name = CFRange, Flags = &h0
-		location as Int32
-		length as Int32
+		location as Integer
+		length as Integer
 	#tag EndStructure
 
 	#tag Structure, Name = CFSocketContext, Flags = &h0
@@ -659,6 +659,7 @@ Module CoreFoundation
 			Group="ID"
 			InitialValue="-2147483648"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
@@ -666,18 +667,23 @@ Module CoreFoundation
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Super"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
@@ -685,6 +691,7 @@ Module CoreFoundation
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Module
