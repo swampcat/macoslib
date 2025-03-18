@@ -117,6 +117,16 @@ Protected Module Carbon
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function IsMonterey() As Boolean
+		  // Tells you if this OS has features of this version
+		  // This means that it returns true for later OS versions as well.
+		  // If you want to test for a particular version, use SystemVersionAsInt
+		  
+		  return SystemVersionAsInt >= 120000
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function IsMountainLion() As Boolean
 		  // Tells you if this OS has features of this version
 		  // This means that it returns true for later OS versions as well.
@@ -133,6 +143,16 @@ Protected Module Carbon
 		  // If you want to test for a particular version, use SystemVersionAsInt
 		  
 		  return SystemVersionAsInt >= 100300
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function IsSequoia() As Boolean
+		  // Tells you if this OS has features of this version
+		  // This means that it returns true for later OS versions as well.
+		  // If you want to test for a particular version, use SystemVersionAsInt
+		  
+		  return SystemVersionAsInt >= 150000
 		End Function
 	#tag EndMethod
 
@@ -157,12 +177,32 @@ Protected Module Carbon
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function IsSonoma() As Boolean
+		  // Tells you if this OS has features of this version
+		  // This means that it returns true for later OS versions as well.
+		  // If you want to test for a particular version, use SystemVersionAsInt
+		  
+		  return SystemVersionAsInt >= 140000
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function IsTiger() As Boolean
 		  // Tells you if this OS has features of this version
 		  // This means that it returns true for later OS versions as well.
 		  // If you want to test for a particular version, use SystemVersionAsInt
 		  
 		  return SystemVersionAsInt >= 100400
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function IsVentura() As Boolean
+		  // Tells you if this OS has features of this version
+		  // This means that it returns true for later OS versions as well.
+		  // If you want to test for a particular version, use SystemVersionAsInt
+		  
+		  return SystemVersionAsInt >= 130000
 		End Function
 	#tag EndMethod
 
@@ -474,6 +514,7 @@ Protected Module Carbon
 			Group="ID"
 			InitialValue="-2147483648"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
@@ -481,18 +522,23 @@ Protected Module Carbon
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Super"
 			Visible=true
 			Group="ID"
+			InitialValue=""
 			Type="String"
+			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
@@ -500,6 +546,7 @@ Protected Module Carbon
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Module
